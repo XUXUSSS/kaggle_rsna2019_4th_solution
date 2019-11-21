@@ -30,7 +30,7 @@ Below you can find a outline of how to reproduce my solution for the RSNA Intrac
 		* Go to folder cls_1, cls_2, cls_3, run ./bin/train.sh, train five fold models for each folder.</br>  
 5. To infer:</br> 
 	1. Extract test features. </br> 
-		* Go to folder, IFE_1, IFE_2, IFE_3, run ./bin/gen_feat_test.sh to extract test features.</br>   
+		* Go to folder IFE_1, IFE_2, IFE_3, run ./bin/gen_feat_test.sh to extract test features.</br>   
 	2. Predict classification probabilities</br> 
 		* Go to folder cls_1, cls_2, cls_3, run ./bin/predict.sh to predict result using extracted features.</br>   
 	3. Merge the results</br> 
