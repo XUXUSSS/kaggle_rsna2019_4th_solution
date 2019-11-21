@@ -7,7 +7,7 @@ Visit kaggle forum for solution overview: [Kaggle RSNA Intracranial Hemorrhage D
 # HARDWARE
 
 * Ubuntu 16.04
-* NVIDIA 2080TI
+* NVIDIA 2080Ti
 
 # SOFTWARE
 (python packages are detailed separately in `requirements.txt`)
