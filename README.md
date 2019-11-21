@@ -34,6 +34,6 @@ Visit kaggle forum for solution overview: [Kaggle RSNA Intracranial Hemorrhage D
 		* Go to folder IFE_1, IFE_2, IFE_3, run ./bin/gen_feat_test.sh to extract test features.</br>   
 	2. Predict classification probabilities</br> 
 		* Go to folder cls_1, cls_2, cls_3, run ./bin/predict.sh to predict result using extracted features.</br>   
-	3. Merge the results</br> 
-		* run ./libs/ensemble.sh to average all the predictions.</br>   
+	3. Ensemble</br> 
+		* run ./libs/ensemble.sh to ensemble all the predictions.</br>   
 6. Models and features are generated in sequence. If one follows the above mentioned steps in order, all the softlinks should be valid by the time they are referred. </br>   
