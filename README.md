@@ -2,7 +2,7 @@ Hello!
 
 Below you can find a outline of how to reproduce my solution for the RSNA Intracranial Hemorrhage Detection competition. </br>
 
-Visit kaggle forum for solution overview: [Kaggle RSNA Intracranial Hemorrhage Detection](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection/discussion/118249#latest-678438)
+Visit kaggle forum for solution overview: [Kaggle RSNA Intracranial Hemorrhage Detection: 4th Place Solution](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection/discussion/118249#latest-678438)
 
 # HARDWARE
 
