@@ -159,7 +159,7 @@ class CustomDataset(torch.utils.data.Dataset):
 
         self.transforms = factory.get_transforms(self.cfg)
         with open(cfg.annotations, 'rb') as f:
-            print('############cfg annotations : ', cfg.annotations)
+            #print('############cfg annotations : ', cfg.annotations)
             self.df = pickle.load(f)
 
         self.sorted_df = self.df.sort_values(['SeriesInstanceUID','Position3'])
@@ -171,7 +171,7 @@ class CustomDataset(torch.utils.data.Dataset):
 
         self.df = apply_dataset_policy(self.df, self.cfg.dataset_policy)
 
-        print('!!!!!!!!!!!!, self.df len = ', len(self.df))
+        #print('!!!!!!!!!!!!, self.df len = ', len(self.df))
 
         #self.df = self.df.sample(560)
 
