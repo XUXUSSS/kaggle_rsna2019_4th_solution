@@ -164,11 +164,11 @@ class CustomDataset(torch.utils.data.Dataset):
 
         self.sorted_df = self.df.sort_values(['SeriesInstanceUID','Position3'])
         self.sorted_df.index = range(self.df.shape[0])
-        
+
         if folds:
             self.df = self.df[self.df.fold.isin(folds)]
             log('read dataset (%d records)' % len(self.df))
-        
+
         self.df = apply_dataset_policy(self.df, self.cfg.dataset_policy)
 
         print('!!!!!!!!!!!!, self.df len = ', len(self.df))
@@ -179,8 +179,6 @@ class CustomDataset(torch.utils.data.Dataset):
         return len(self.df)
 
     def __getitem__(self, idx):
-        if idx > 531500: 
-          print('ERROR!!!!!!!', idx)
         row = self.df.iloc[idx]
 
         sorted_index = self.sorted_df[self.sorted_df['ID'] == row['ID']].index
@@ -193,7 +191,7 @@ class CustomDataset(torch.utils.data.Dataset):
         if sorted_index < len(self.df) - 1:
           if self.sorted_df.iloc[sorted_index + 1]['SeriesInstanceUID'].item() == row['SeriesInstanceUID']:
             next_row = self.sorted_df.iloc[sorted_index + 1].iloc[0]
-        
+
         #print('pre ID: ', pre_row.ID)
         #print('now ID: ', row.ID)
         #print('next ID: ', next_row.ID)
@@ -230,5 +228,5 @@ class CustomDataset(torch.utils.data.Dataset):
                 cls = mappings.label_to_num[label]
                 target[cls] += self.cfg.propagate_diagnosis
         target = np.clip(target, 0.0, 1.0)
-        
+
         return image, torch.FloatTensor(target), row.ID
