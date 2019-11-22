@@ -24,11 +24,14 @@ Visit kaggle forum for solution overview: [Kaggle RSNA Intracranial Hemorrhage D
 3. cd IFE_1, run ./bin/preprocess.py to preprocess the training and test images and split the training data into five folds.</br> 
 4. To train:</br> 
 	1. Train feature extraction models</br>  
-		* Go to IFE_1, IFE_2, IFE_3, run ./bin/train.sh to train five fold models. Models are saved in /model/. Best models are saved as foldx_best.pt.<br>  
+		* Go to IFE_1, IFE_2, IFE_3, run ./bin/train.sh to train five fold models. Models are saved in /model/. Best models are saved as foldx_best.pt.</br>   
+		* It will take about 24  ~ 48 hours to train each model for one fold.</br> 
 	2. Extract features</br>   
-		* Go to IFE_1, IFE_2, IFE_3, run ./bin/gen_feat_train.sh and ./bin/gen_feat_test.sh to generate 1D (and 3D features). Use the best models generated from step 4.1.1.<br>   
+		* Go to IFE_1, IFE_2, IFE_3, run ./bin/gen_feat_train.sh and ./bin/gen_feat_test.sh to generate 1D (and 3D features). Use the best models generated from step 4.1.1.</br>   
+		* It will take around 5 hours to extract one feature set (train/test TTA5).</br> 
 	3. Train classification models.</br>   
 		* Go to folder cls_1, cls_2, cls_3, run ./bin/train.sh, train five fold models for each folder.</br>  
+		* It will take around 3 hour to train 1D+3D model, and around 1.5 hours to train 1D model. </br> 
 5. To infer:</br> 
 	1. Extract test features. </br> 
 		* Go to folder IFE_1, IFE_2, IFE_3, run ./bin/gen_feat_test.sh to extract test features.</br>   
