@@ -31,7 +31,7 @@ Visit kaggle forum for solution overview: [Kaggle RSNA Intracranial Hemorrhage D
 		* It will take around 5 hours to extract one feature set (train/test TTA5).</br> 
 	3. Train classification models.</br>   
 		* Go to folder cls_1, cls_2, cls_3, run ./bin/train.sh, train five fold models for each folder.</br>  
-		* It will take around 3 hours to train 1D+3D model (Single model), and around 1.5 hours to train 1D model (Single model). </br> 
+		* It will take around 3 hours to train 1D+3D model (single model), and around 1.5 hours to train 1D model (single model). </br> 
 5. To infer:</br> 
 	1. Extract test features. </br> 
 		* Go to folder IFE_1, IFE_2, IFE_3, run ./bin/gen_feat_test.sh to extract test features.</br>   
